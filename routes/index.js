@@ -10,6 +10,11 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Quiz', errors: []});
 });
 
+// Página de créditos
+router.get('/author', function(req, res, next) {
+  res.render('creditos',);
+});
+
 // Autoload de comandos con :quizId
 router.param('quizId', quizController.load);  // autoload :quizId
 router.param('commentId', commentController.load);  // autoload :commentId
